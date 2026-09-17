@@ -18,7 +18,7 @@
     .serif-title { font-family: 'Playfair Display', serif; }
     .handwriting { font-family: 'Sacramento', cursive; }
     .glass-card {
-      background: rgba(255, 255, 255, 0.84);
+      background: rgba(255, 255, 255, 0.86);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.9);
@@ -26,9 +26,9 @@
     }
     .polaroid {
       background: #ffffff;
-      padding: 10px 10px 20px 10px;
-      box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.12);
-      transition: transform 0.25s ease-out;
+      padding: 8px 8px 18px 8px;
+      box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s ease-out;
     }
     .polaroid:active {
       transform: scale(1.04) rotate(0deg) !important;
@@ -40,217 +40,117 @@
 
   <canvas id="heartCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-  <!-- Ambient Audio Toggle -->
+  <!-- Romantic Ambient Audio Button -->
   <button id="musicToggle" onclick="toggleAudio()" class="fixed top-4 right-4 z-50 bg-white/90 backdrop-blur-md shadow-md border border-rose-200 text-rose-600 px-3.5 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 active:scale-95 transition-transform">
     <span id="musicIcon">🎵</span> <span id="musicText">Play Music</span>
   </button>
 
-  <main class="relative z-10 max-w-lg mx-auto px-4 pt-10 space-y-14">
+  <main class="relative z-10 max-w-lg mx-auto px-4 pt-10 space-y-12">
 
-    <!-- Hero Header -->
-    <header class="text-center space-y-3">
-      <span class="inline-block px-3.5 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-bold tracking-widest uppercase border border-rose-200">
-        Our Journey
+    <!-- Header Section -->
+    <header class="text-center space-y-2">
+      <span class="inline-block px-3 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-bold tracking-widest uppercase border border-rose-200">
+        Our Story
       </span>
       <h1 class="serif-title text-4xl sm:text-5xl font-bold tracking-tight text-rose-900 leading-tight">
         Every Second With You Is Home
       </h1>
       <p class="text-rose-700/80 text-xs sm:text-sm max-w-xs mx-auto leading-relaxed">
-        From opening kinder eggs on date one to paint dates, bike rides, and everyday giggles—I would choose you over and over.
+        From our first cafe date to all our adventures, goofy laughs, and quiet cuddles—you are my absolute favorite person.
       </p>
     </header>
 
-    <!-- Star Solo Portrait -->
-    <section class="glass-card rounded-3xl p-4 text-center">
-      <div class="polaroid rounded-2xl mx-auto max-w-xs rotate-[-1deg]">
-        <img src="photo1.jpg" alt="The Girl of My Dreams" class="w-full aspect-[3/4] object-cover rounded-xl shadow-inner" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600'" />
-        <p class="handwriting text-3xl text-rose-600 mt-3">The smile that changed my entire world</p>
-      </div>
-    </section>
-
-    <!-- Chapter 1: The First Date Video -->
-    <section class="glass-card rounded-3xl p-5 space-y-4">
-      <div class="flex items-center gap-2.5">
-        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500 text-white font-bold text-xs">1</span>
-        <div>
-          <h2 class="serif-title text-xl font-bold text-rose-900">Where It All Began</h2>
-          <p class="text-[11px] text-rose-500 font-medium">Our First Date</p>
-        </div>
-      </div>
-
-      <div class="rounded-2xl overflow-hidden shadow-md bg-black aspect-[9/16] max-h-[500px] mx-auto">
-        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="video1.mp4" type="video/mp4" />
-          Your browser does not support video playback.
-        </video>
-      </div>
-
-      <p class="text-center text-xs text-rose-800/80 leading-relaxed px-2">
-        Unwrapping that toy across the cafe table, seeing you laugh and flash that spontaneous peace sign—that was the minute I knew you were the one.
-      </p>
-    </section>
-
-    <!-- Chapter 2: The Goofy & Silly Moments Video -->
-    <section class="glass-card rounded-3xl p-5 space-y-4">
-      <div class="flex items-center gap-2.5">
-        <span class="flex h-7 w-7 items-center justify-center rounded-full bg-rose-500 text-white font-bold text-xs">2</span>
-        <div>
-          <h2 class="serif-title text-xl font-bold text-rose-900">Just Us Being Us</h2>
-          <p class="text-[11px] text-rose-500 font-medium">Our Favorite Everyday Giggles</p>
-        </div>
-      </div>
-
-      <div class="rounded-2xl overflow-hidden shadow-md bg-black aspect-[9/16] max-h-[500px] mx-auto">
-        <video controls playsinline preload="metadata" class="w-full h-full object-cover">
-          <source src="video2.mp4" type="video/mp4" />
-          Your browser does not support video playback.
-        </video>
-      </div>
-
-      <p class="text-center text-xs text-rose-800/80 leading-relaxed px-2">
-        No filters, no pretenses—just pure happiness, teasing, forehead kisses, and laughing at absolutely nothing with you.
-      </p>
-    </section>
-
-    <!-- Chapter 3: Scrapbook Gallery -->
+    <!-- 38 Polaroid Scrapbook Grid -->
     <section class="space-y-4">
-      <div class="text-center space-y-1">
-        <span class="text-xs font-semibold text-rose-500 tracking-wider uppercase">Our Adventures</span>
-        <h2 class="serif-title text-2xl font-bold text-rose-900">A Story in Polaroids</h2>
-        <p class="text-rose-700/70 text-xs">Tap each memory to take a closer look</p>
+      <div class="text-center">
+        <h2 class="serif-title text-2xl font-bold text-rose-900">Chapters of Us</h2>
+        <p class="text-rose-700/70 text-xs">Tap any memory to look closer</p>
       </div>
 
-      <div class="grid grid-cols-2 gap-3.5">
-        <!-- Photo 2: First date mirror -->
-        <div class="polaroid rounded-xl rotate-[1.5deg]">
-          <img src="photo2.jpg" alt="First Date Mirror" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Day One Mirror Snap</p>
-        </div>
-
-        <!-- Photo 3: Motorbike -->
-        <div class="polaroid rounded-xl rotate-[-2deg]">
-          <img src="photo3.jpg" alt="Motorbike Rider" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">My Favorite Rider 🏍️</p>
-        </div>
-
-        <!-- Photo 4: Painting Date -->
-        <div class="polaroid rounded-xl rotate-[-1.5deg]">
-          <img src="photo4.jpg" alt="Painting Date" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Our Paint Date 🎨</p>
-        </div>
-
-        <!-- Photo 5: Matcha & Brunch -->
-        <div class="polaroid rounded-xl rotate-[2deg]">
-          <img src="photo5.jpg" alt="Matcha Date" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Matcha Morning Smiles</p>
-        </div>
-
-        <!-- Photo 6: Stairs with Lavender -->
-        <div class="polaroid rounded-xl rotate-[1deg]">
-          <img src="photo6.jpg" alt="Lavender Stairs" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Side by Side Always</p>
-        </div>
-
-        <!-- Photo 7: Go-Karting -->
-        <div class="polaroid rounded-xl rotate-[-2deg]">
-          <img src="photo7.jpg" alt="Go-Karting" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Partner In Crime 🏎️</p>
-        </div>
-
-        <!-- Photo 8: Funky Glasses -->
-        <div class="polaroid rounded-xl rotate-[2.5deg]">
-          <img src="photo8.jpg" alt="Funky Glasses" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1519741497674-611481863552?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Matching Your Crazy</p>
-        </div>
-
-        <!-- Photo 9: Piggyback Ride -->
-        <div class="polaroid rounded-xl rotate-[-1deg]">
-          <img src="photo9.jpg" alt="Piggyback Ride" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Always Got Your Back</p>
-        </div>
-
-        <!-- Photo 10: Sleeping on Chest -->
-        <div class="polaroid rounded-xl rotate-[1.5deg]">
-          <img src="photo10.jpg" alt="Sleeping Peacefully" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">My Safest Haven 🤍</p>
-        </div>
-
-        <!-- Photo 11: Mirror Kiss -->
-        <div class="polaroid rounded-xl rotate-[-2deg]">
-          <img src="photo11.jpg" alt="Mirror Kiss" class="w-full aspect-square object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500'" />
-          <p class="handwriting text-base text-rose-700 text-center mt-2">Forever With You</p>
-        </div>
-      </div>
+      <div id="galleryGrid" class="grid grid-cols-2 gap-3"></div>
     </section>
 
-    <!-- Chapter 4: The Proposal Card -->
-    <section id="proposal-box" class="glass-card rounded-3xl p-6 sm:p-8 text-center space-y-6 border-2 border-rose-300 shadow-xl">
+    <!-- Proposal Card -->
+    <section id="proposal-box" class="glass-card rounded-3xl p-6 text-center space-y-6 border-2 border-rose-300 shadow-xl">
       <div class="text-4xl animate-bounce">💍</div>
       
-      <div class="space-y-3">
+      <div class="space-y-2">
         <h2 class="serif-title text-3xl font-bold text-rose-900 leading-tight">
           Will you marry me?
         </h2>
-        <p class="text-rose-700/90 text-xs sm:text-sm leading-relaxed max-w-xs mx-auto">
-          You are my greatest comfort, my favorite teammate, and my home. I want every adventure for the rest of my life to be with you.
+        <p class="text-rose-700/90 text-xs leading-relaxed max-w-xs mx-auto">
+          You are my best friend and my whole heart. I want every single day of the rest of my life to be with you.
         </p>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="relative flex flex-col gap-3 pt-2 min-h-[110px]">
-        <button 
-          id="yesBtn" 
-          onclick="celebrate()" 
-          class="w-full py-4 bg-rose-600 active:bg-rose-700 text-white font-bold rounded-2xl shadow-lg shadow-rose-600/30 text-lg transition-transform active:scale-95"
-        >
+      <div class="relative flex flex-col gap-3 pt-2">
+        <button id="yesBtn" onclick="celebrate()" class="w-full py-4 bg-rose-600 active:bg-rose-700 text-white font-bold rounded-2xl shadow-lg shadow-rose-600/30 text-lg active:scale-95 transition-transform">
           YES, Forever & Always! ❤️
         </button>
-
-        <button 
-          id="noBtn" 
-          ontouchstart="dodgeMobile(this)" 
-          onclick="dodgeMobile(this)" 
-          class="w-full py-3 bg-white/70 text-rose-400 font-semibold rounded-2xl border border-rose-200 text-xs transition-transform duration-150"
-        >
+        <button id="noBtn" ontouchstart="dodgeMobile(this)" onclick="dodgeMobile(this)" class="w-full py-3 bg-white/70 text-rose-400 font-semibold rounded-2xl border border-rose-200 text-xs transition-transform duration-150">
           No 🙈
         </button>
       </div>
 
-      <div id="celebration" class="hidden pt-6 space-y-3">
-        <h3 class="serif-title text-2xl font-bold text-rose-800">
-          She Said YES! 🥂🎉
-        </h3>
-        <p class="handwriting text-3xl text-rose-600">
-          To a lifetime of love, laughter, and us!
-        </p>
+      <div id="celebration" class="hidden pt-4 space-y-2">
+        <h3 class="serif-title text-2xl font-bold text-rose-800">She Said YES! 🥂🎉</h3>
+        <p class="handwriting text-3xl text-rose-600">To a lifetime of love and laughter!</p>
       </div>
     </section>
 
   </main>
 
   <script>
-    // Runaway No Button for Mobile Touches
+    // Exact list of all 38 uploaded photos
+    const photos = [
+      "IMG_1896.jpeg", "IMG_1954.jpeg", "IMG_2134.jpeg", "IMG_4253.jpeg",
+      "IMG_4254.jpeg", "IMG_4264.jpeg", "IMG_4269.jpeg", "IMG_4270.jpeg",
+      "IMG_4273.jpeg", "IMG_4278.jpeg", "IMG_4293.jpeg", "IMG_4294.jpeg",
+      "IMG_4490.jpeg", "IMG_4549.jpeg", "IMG_4561.jpeg", "IMG_4585.jpeg",
+      "IMG_4588.jpeg", "IMG_4594.jpeg", "IMG_4614.jpeg", "IMG_4704.jpeg",
+      "IMG_4716.jpeg", "IMG_4720.jpeg", "IMG_4724.jpeg", "IMG_4769.jpeg",
+      "IMG_4774.jpeg", "IMG_4827.jpeg", "IMG_5308.jpeg", "IMG_5352.jpeg",
+      "IMG_5450.jpeg", "IMG_5499.jpeg", "IMG_5514.jpeg", "IMG_5572.jpeg",
+      "IMG_5576.jpeg", "IMG_5727.jpeg", "IMG_5729.jpeg", "IMG_5788.jpeg",
+      "IMG_5813.jpeg", "IMG_5816.jpeg"
+    ];
+
+    const captions = [
+      "The girl of my dreams", "Day One mirror snap", "My favorite rider", "Our paint date",
+      "Matcha morning smiles", "Side by side always", "Partner in crime", "Matching energy",
+      "Always got your back", "My safest haven", "Forever with you", "Fancy date nights",
+      "That radiant laugh", "Unfiltered joy", "Our cozy days", "Two of a kind",
+      "Adventure buddy", "Everyday magic", "My sweetest comfort", "Just you and me",
+      "Endless giggles", "Sweetest smile", "My constant person", "Making memories",
+      "My whole world", "Golden moments", "Pure happiness", "With you forever"
+    ];
+
+    const grid = document.getElementById('galleryGrid');
+    photos.forEach((file, idx) => {
+      const rot = ((idx % 5) - 2) * 1.5;
+      const card = document.createElement('div');
+      card.className = 'polaroid rounded-xl';
+      card.style.transform = `rotate(${rot}deg)`;
+      card.innerHTML = `
+        <img src="${file}" alt="Our Memory" class="w-full aspect-square object-cover rounded-lg" loading="lazy" />
+        <p class="handwriting text-sm text-rose-700 text-center mt-2">${captions[idx % captions.length]}</p>
+      `;
+      grid.appendChild(card);
+    });
+
     function dodgeMobile(btn) {
       const offsetX = (Math.random() - 0.5) * 220;
       const offsetY = (Math.random() - 0.5) * 140;
       btn.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     }
 
-    // Confetti Fireworks on YES
     function celebrate() {
       const duration = 6 * 1000;
       const animationEnd = Date.now() + duration;
-
       const interval = setInterval(function() {
         const timeLeft = animationEnd - Date.now();
         if (timeLeft <= 0) return clearInterval(interval);
-
-        confetti({
-          particleCount: 40,
-          spread: 80,
-          origin: { y: 0.6 },
-          colors: ['#e11d48', '#fda4af', '#f43f5e', '#ffe4e6', '#ffd700']
-        });
+        confetti({ particleCount: 40, spread: 80, origin: { y: 0.6 }, colors: ['#e11d48', '#fda4af', '#f43f5e', '#ffe4e6', '#ffd700'] });
       }, 250);
 
       document.getElementById('noBtn').style.display = 'none';
@@ -258,100 +158,60 @@
       document.getElementById('celebration').classList.remove('hidden');
     }
 
-    // Built-in romantic chime synth (Zero external music files needed)
-    let audioCtx = null;
-    let isPlaying = false;
-    let synthTimer = null;
+    let audioCtx = null, isPlaying = false, synthTimer = null;
     const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99];
 
     function playChime() {
       if (!audioCtx) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      const freq = notes[Math.floor(Math.random() * notes.length)];
-      
+      const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
       osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      osc.frequency.setValueAtTime(notes[Math.floor(Math.random() * notes.length)], audioCtx.currentTime);
       gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
       gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.5);
-
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      osc.start();
-      osc.stop(audioCtx.currentTime + 2.6);
+      osc.connect(gain); gain.connect(audioCtx.destination);
+      osc.start(); osc.stop(audioCtx.currentTime + 2.6);
     }
 
     function toggleAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      const icon = document.getElementById('musicIcon');
-      const text = document.getElementById('musicText');
-
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const icon = document.getElementById('musicIcon'), text = document.getElementById('musicText');
       if (!isPlaying) {
-        isPlaying = true;
-        icon.innerText = '⏸️';
-        text.innerText = 'Pause';
-        playChime();
-        synthTimer = setInterval(playChime, 850);
+        isPlaying = true; icon.innerText = '⏸️'; text.innerText = 'Pause';
+        playChime(); synthTimer = setInterval(playChime, 850);
       } else {
-        isPlaying = false;
-        icon.innerText = '🎵';
-        text.innerText = 'Play Music';
+        isPlaying = false; icon.innerText = '🎵'; text.innerText = 'Play Music';
         clearInterval(synthTimer);
       }
     }
 
-    // Floating heart canvas
-    const canvas = document.getElementById('heartCanvas');
-    const ctx = canvas.getContext('2d');
+    const canvas = document.getElementById('heartCanvas'), ctx = canvas.getContext('2d');
     let hearts = [];
-
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener('resize', resize);
-    resize();
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resize); resize();
 
     class Heart {
       constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = canvas.height + 20;
-        this.size = Math.random() * 9 + 5;
-        this.speed = Math.random() * 0.9 + 0.3;
-        this.opacity = Math.random() * 0.35 + 0.1;
+        this.x = Math.random() * canvas.width; this.y = canvas.height + 20;
+        this.size = Math.random() * 8 + 5; this.speed = Math.random() * 0.8 + 0.3;
+        this.opacity = Math.random() * 0.3 + 0.1;
       }
       update() {
         this.y -= this.speed;
-        if (this.y < -20) {
-          this.y = canvas.height + 20;
-          this.x = Math.random() * canvas.width;
-        }
+        if (this.y < -20) { this.y = canvas.height + 20; this.x = Math.random() * canvas.width; }
       }
       draw() {
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
-        ctx.fillStyle = '#f43f5e';
-        ctx.beginPath();
+        ctx.save(); ctx.globalAlpha = this.opacity; ctx.fillStyle = '#f43f5e'; ctx.beginPath();
         const topH = this.size * 0.3;
         ctx.moveTo(this.x, this.y + topH);
         ctx.bezierCurveTo(this.x, this.y, this.x - this.size / 2, this.y, this.x - this.size / 2, this.y + topH);
         ctx.bezierCurveTo(this.x - this.size / 2, this.y + (this.size + topH) / 2, this.x, this.y + this.size, this.x, this.y + this.size);
         ctx.bezierCurveTo(this.x, this.y + this.size, this.x + this.size / 2, this.y + (this.size + topH) / 2, this.x + this.size / 2, this.y + topH);
         ctx.bezierCurveTo(this.x + this.size / 2, this.y, this.x, this.y, this.x, this.y + topH);
-        ctx.closePath();
-        ctx.fill();
-        ctx.restore();
+        ctx.closePath(); ctx.fill(); ctx.restore();
       }
     }
-
-    for (let i = 0; i < 18; i++) hearts.push(new Heart());
+    for (let i = 0; i < 16; i++) hearts.push(new Heart());
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       hearts.forEach(h => { h.update(); h.draw(); });
